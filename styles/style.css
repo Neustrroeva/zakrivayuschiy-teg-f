@@ -360,7 +360,7 @@ dialog::backdrop {
 
 .ok {
   background-color: var(--main-color);
-  outline: 2px solid var(--bg-color);
+  border: 2px solid var(--bg-color);
   width: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem);
   padding-block: 12.5px;
 }
