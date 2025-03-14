@@ -3,7 +3,7 @@
     --main-font: 'Inter', Roboto, sans-serif;
     --card-content-font-weight: 400;
     --card-title-font-weight: 700;
-    --accent-font: 'PressStart2P', serif;
+    --accent-font: 'PressStart2P', fantasy, serif;
     --main-color: #000;
     --stroke-color: #fff;
     --bg-gradient: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
