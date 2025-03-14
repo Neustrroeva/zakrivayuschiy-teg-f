@@ -77,36 +77,26 @@
   object-fit: cover;
   border-block: 2px solid var(--main-color);
 }
-
-.free-track {
+.filter-contrast__hue-rotate {
   filter: contrast(0.5) hue-rotate(55deg);
 }
-
-.first-sprint-start {
+.filter-blur__hue-rotate {
   filter: blur(3px) hue-rotate(55deg);
 }
-
-.first-sprint-end {
+.filter-saturate__grayscale {
   filter: saturate(10) grayscale(0.8);
 }
-
-.second-sprint-start {
+.filter-invert {
   filter: invert(1);
 }
-
-.second-sprint-end {
+.filter-sepia {
   filter: sepia(0.7);
 }
-
-.third-sprint-start {
+.filter-contrast {
   filter: contrast(0.6);
 }
 
-.third-sprint-end {
-  filter: invert(0.8);
-}
-
-.now {
+.filter-brightness {
   filter: brightness(0.7);
 }
 
@@ -151,6 +141,7 @@
   justify-self: center;
   justify-content: center;
   align-items: center;
+  transition: 0.3s ease;
 }
 
 .buttons::before {
@@ -164,6 +155,15 @@
   z-index: 0;
   transform: translateX(-100%);
   transition: 0.5s ease-in-out;
+}
+
+.buttons:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--main-color);
+}
+
+.buttons:hover::before {
+  transform: translateX(0);
 }
 
 .button__text {
@@ -186,16 +186,6 @@
 
 .card__like-button {
   width: 130px;
-  transition: 0.3s ease;
-}
-
-.card__like-button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--main-color);
-}
-
-.card__like-button:hover::before {
-  transform: translateX(0);
 }
 
 .card__icon-button {
@@ -205,13 +195,8 @@
   height: 34px;
 }
 
-.card__icon-button:focus {
-  outline: none;
-}
-
 .card__icon-button:focus-visible {
   outline: 2px solid var(--main-color);
-  transition: 0.3s ease;
 }
 
 .heart {
@@ -222,6 +207,10 @@
 .main-body {
   fill: transparent;
   transition: fill 0.3s;
+}
+
+.core {
+  transition-delay: 0.03s;
 }
 
 .contour {
@@ -285,16 +274,6 @@
   background-color: var(--bg-color);
 }
 
-.dialog__button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--main-color);
-  transition: 0.3s ease;
-}
-
-.dialog__button:hover::before {
-  transform: translateX(0);
-}
-
 dialog {
   max-width: 353px;
 }
@@ -331,7 +310,6 @@ dialog::backdrop {
   width: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem);
   padding-block: 12.5px;
   margin-block: 10px;
-  transition: 0.3s ease;
 }
 
 .ok::before {
@@ -340,13 +318,10 @@ dialog::backdrop {
 }
 
 .ok:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--main-color);
-  transition: 0.3s ease;
+  box-shadow: 2px 2px 0 var(--bg-color);
 }
 
 .ok:hover::before {
-  transform: translateX(0);
   mix-blend-mode: difference;
 }
 
